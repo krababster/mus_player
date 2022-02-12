@@ -60,16 +60,20 @@ namespace Mus_Player
             this.listbox.Size = new Size(600, 300);
             this.Controls.Add(listbox);
 
-
+            this.add.Location = new Point(720, this.listbox.Location.Y + 25);
+            this.add.Size = new Size(50, 50);
+            this.add.Text = "+";
+            this.add.Font = new Font("Times New Roman",15);
+            this.Controls.Add(add);
         }
         PictureBox CD = new PictureBox();
 
         Button PrevTrack = new Button();
         Button NextTrack = new Button();
         Button PlayStop = new Button();
+        Button add = new Button();
 
-        OpenFileDialog add = new OpenFileDialog();
-
+        //OpenFileDialog add = new OpenFileDialog();
         ListBox listbox = new ListBox();
         #endregion
     }

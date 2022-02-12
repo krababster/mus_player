@@ -38,7 +38,7 @@ namespace Mus_Player
             this.ClientSize = new System.Drawing.Size(800, 800);
             this.Text = "Form1";
 
-            this.CD.Image = Image.FromFile("disk-dvdr-4-7gb-16h-vulk-(50)-d-54099-085-mix.jpg");
+            this.CD.Image = Image.FromFile("CD.jpg");
             this.CD.Location = new Point(250, 0);
             this.CD.Size = new Size(300, 290);
             this.Controls.Add(CD);
@@ -60,6 +60,7 @@ namespace Mus_Player
 
             this.listbox.Location = new Point(100, 400);
             this.listbox.Size = new Size(600, 300);
+            
             this.Controls.Add(listbox);
 
             this.add_track_button.Location = new Point(720, this.listbox.Location.Y + 25);
@@ -75,19 +76,19 @@ namespace Mus_Player
             this.remove_track_button.Font = new Font("Times New Roman", 15);
             this.Controls.Add(remove_track_button);
 
-            add_track.Filter = "Audio files (*.mp3)|*.mp3|(*.waw)|*.waw";
+           
 
 
         }
 
         private void Add_track_button_Click(object sender, System.EventArgs e)
         {
+            OpenFileDialog add_track = new OpenFileDialog();
+            add_track.Filter = "Audio files (*.mp3)|*.mp3|(*.waw)|*.waw";
             if (add_track.ShowDialog() == DialogResult.OK)
             {
-                string filename = add_track.FileName;
+                listbox.Items.Add(Path.GetFileName(add_track.FileName));
             }
-                
-
         }
 
         PictureBox CD = new PictureBox();
@@ -98,7 +99,7 @@ namespace Mus_Player
         Button add_track_button = new Button();
         Button remove_track_button = new Button();
 
-        OpenFileDialog add_track = new OpenFileDialog();
+       
         ListBox listbox = new ListBox();
 
         

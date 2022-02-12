@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mus_Player", "Mus_Player.csproj", "{6BFC325E-74BA-4E76-8DC9-35A0A6945709}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BFC325E-74BA-4E76-8DC9-35A0A6945709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BFC325E-74BA-4E76-8DC9-35A0A6945709}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BFC325E-74BA-4E76-8DC9-35A0A6945709}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BFC325E-74BA-4E76-8DC9-35A0A6945709}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A2FC1AFC-697A-4E66-9E85-33B59435EEDD}
+	EndGlobalSection
+EndGlobal

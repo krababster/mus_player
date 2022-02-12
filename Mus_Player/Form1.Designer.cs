@@ -33,16 +33,26 @@ namespace Mus_Player
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 1000);
+            this.ClientSize = new System.Drawing.Size(800, 800);
             this.Text = "Form1";
 
             this.CD.Image = Image.FromFile("disk-dvdr-4-7gb-16h-vulk-(50)-d-54099-085-mix.jpg");
-            this.CD.Location = new Point(450, 0);
-            this.CD.Size = new Size(400, 400);
+            this.CD.Location = new Point(250, 0);
+            this.CD.Size = new Size(300, 290);
             this.Controls.Add(CD);
+
+            this.PrevTrack.Location = new Point(250,300);
+            this.PrevTrack.Size = new Size(50,25);
+            this.PrevTrack.Text = "<";
+            this.PrevTrack.Font = new Font("Times New Roman", 10);
+            this.Controls.Add(PrevTrack);
 
         }
         PictureBox CD = new PictureBox();
+
+        Button PrevTrack = new Button();
+        Button NextTrack = new Button();
+        Button PlayStop = new Button();
         #endregion
     }
 }

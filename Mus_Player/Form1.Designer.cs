@@ -1,5 +1,7 @@
-﻿using System.Drawing;
+﻿using System.IO;
+using System.Drawing;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace Mus_Player
 {
@@ -64,6 +66,7 @@ namespace Mus_Player
             this.add_track_button.Size = new Size(50, 50);
             this.add_track_button.Text = "+";
             this.add_track_button.Font = new Font("Times New Roman",15);
+            this.add_track_button.Click += Add_track_button_Click;
             this.Controls.Add(add_track_button);
 
             this.remove_track_button.Location = new Point(720, this.add_track_button.Location.Y + 150);
@@ -72,7 +75,21 @@ namespace Mus_Player
             this.remove_track_button.Font = new Font("Times New Roman", 15);
             this.Controls.Add(remove_track_button);
 
+            add_track.Filter = "Audio files (*.mp3)|*.mp3|(*.waw)|*.waw";
+
+
         }
+
+        private void Add_track_button_Click(object sender, System.EventArgs e)
+        {
+            if (add_track.ShowDialog() == DialogResult.OK)
+            {
+                string filename = add_track.FileName;
+            }
+                
+
+        }
+
         PictureBox CD = new PictureBox();
 
         Button PrevTrack_button = new Button();
@@ -81,8 +98,10 @@ namespace Mus_Player
         Button add_track_button = new Button();
         Button remove_track_button = new Button();
 
-        //OpenFileDialog add = new OpenFileDialog();
+        OpenFileDialog add_track = new OpenFileDialog();
         ListBox listbox = new ListBox();
+
+        
         #endregion
     }
 }

@@ -42,9 +42,8 @@ namespace Mus_Player
             this.Controls.Add(CD);
 
             this.PrevTrack.Location = new Point(250,300);
-            this.PrevTrack.Size = new Size(50,25);
-            this.PrevTrack.Text = "<";
-            this.PrevTrack.Font = new Font("Times New Roman", 10);
+            this.PrevTrack.Size = new Size(50,50);
+            this.PrevTrack.Image = Image.FromFile("Prev.png");
             this.Controls.Add(PrevTrack);
 
             this.PlayStop.Location = new Point(this.PrevTrack.Location.X + 125, this.PrevTrack.Location.Y);
@@ -52,6 +51,10 @@ namespace Mus_Player
             this.PlayStop.Image = Image.FromFile("Play.png");
             this.Controls.Add(PlayStop);
 
+            this.NextTrack.Location = new Point(this.PlayStop.Location.X + 125, this.PlayStop.Location.Y);
+            this.NextTrack.Size = new Size(50, 50);
+            this.NextTrack.Image = Image.FromFile("Next.png");
+            this.Controls.Add(NextTrack);
         }
         PictureBox CD = new PictureBox();
 

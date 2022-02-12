@@ -41,37 +41,45 @@ namespace Mus_Player
             this.CD.Size = new Size(300, 290);
             this.Controls.Add(CD);
 
-            this.PrevTrack.Location = new Point(250, 300);
-            this.PrevTrack.Size = new Size(50, 50);
-            this.PrevTrack.Image = Image.FromFile("Prev.png");
-            this.Controls.Add(PrevTrack);
+            this.PrevTrack_button.Location = new Point(250, 300);
+            this.PrevTrack_button.Size = new Size(50, 50);
+            this.PrevTrack_button.Image = Image.FromFile("Prev.png");
+            this.Controls.Add(PrevTrack_button);
 
-            this.PlayStop.Location = new Point(this.PrevTrack.Location.X + 125, this.PrevTrack.Location.Y);
-            this.PlayStop.Size = new Size(50, 50);
-            this.PlayStop.Image = Image.FromFile("Play.png");
-            this.Controls.Add(PlayStop);
+            this.PlayStop_button.Location = new Point(this.PrevTrack_button.Location.X + 125, this.PrevTrack_button.Location.Y);
+            this.PlayStop_button.Size = new Size(50, 50);
+            this.PlayStop_button.Image = Image.FromFile("Play.png");
+            this.Controls.Add(PlayStop_button);
 
-            this.NextTrack.Location = new Point(this.PlayStop.Location.X + 125, this.PlayStop.Location.Y);
-            this.NextTrack.Size = new Size(50, 50);
-            this.NextTrack.Image = Image.FromFile("Next.png");
-            this.Controls.Add(NextTrack);
+            this.NextTrack_button.Location = new Point(this.PlayStop_button.Location.X + 125, this.PlayStop_button.Location.Y);
+            this.NextTrack_button.Size = new Size(50, 50);
+            this.NextTrack_button.Image = Image.FromFile("Next.png");
+            this.Controls.Add(NextTrack_button);
 
             this.listbox.Location = new Point(100, 400);
             this.listbox.Size = new Size(600, 300);
             this.Controls.Add(listbox);
 
-            this.add.Location = new Point(720, this.listbox.Location.Y + 25);
-            this.add.Size = new Size(50, 50);
-            this.add.Text = "+";
-            this.add.Font = new Font("Times New Roman",15);
-            this.Controls.Add(add);
+            this.add_track_button.Location = new Point(720, this.listbox.Location.Y + 25);
+            this.add_track_button.Size = new Size(50, 50);
+            this.add_track_button.Text = "+";
+            this.add_track_button.Font = new Font("Times New Roman",15);
+            this.Controls.Add(add_track_button);
+
+            this.remove_track_button.Location = new Point(720, this.add_track_button.Location.Y + 150);
+            this.remove_track_button.Size = new Size(50, 50);
+            this.remove_track_button.Text = "-";
+            this.remove_track_button.Font = new Font("Times New Roman", 15);
+            this.Controls.Add(remove_track_button);
+
         }
         PictureBox CD = new PictureBox();
 
-        Button PrevTrack = new Button();
-        Button NextTrack = new Button();
-        Button PlayStop = new Button();
-        Button add = new Button();
+        Button PrevTrack_button = new Button();
+        Button NextTrack_button = new Button();
+        Button PlayStop_button = new Button();
+        Button add_track_button = new Button();
+        Button remove_track_button = new Button();
 
         //OpenFileDialog add = new OpenFileDialog();
         ListBox listbox = new ListBox();

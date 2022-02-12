@@ -1,4 +1,7 @@
-﻿namespace Mus_Player
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace Mus_Player
 {
     partial class Form1
     {
@@ -30,10 +33,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 1000);
             this.Text = "Form1";
-        }
 
+            this.CD.Image = Image.FromFile("disk-dvdr-4-7gb-16h-vulk-(50)-d-54099-085-mix.jpg");
+            this.CD.Location = new Point(450, 0);
+            this.CD.Size = new Size(400, 400);
+            this.Controls.Add(CD);
+
+        }
+        PictureBox CD = new PictureBox();
         #endregion
     }
 }

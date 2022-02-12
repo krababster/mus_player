@@ -47,6 +47,11 @@ namespace Mus_Player
             this.PrevTrack.Font = new Font("Times New Roman", 10);
             this.Controls.Add(PrevTrack);
 
+            this.PlayStop.Location = new Point(this.PrevTrack.Location.X + 125, this.PrevTrack.Location.Y);
+            this.PlayStop.Size = new Size(50, 50);
+            this.PlayStop.Image = Image.FromFile("Play.png");
+            this.Controls.Add(PlayStop);
+
         }
         PictureBox CD = new PictureBox();
 
